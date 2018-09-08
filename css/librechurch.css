@@ -2,6 +2,15 @@ body {
   font-family: "Source Sans Pro";
 }
 
+.portfolio-item {
+    min-height: 370px;
+}
+
+.img-fluid {
+    max-height: 370px;
+    float: right;
+}
+
 .team-member {
   margin-bottom: 50px;
   text-align: center;
