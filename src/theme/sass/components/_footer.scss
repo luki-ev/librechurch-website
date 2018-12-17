@@ -52,6 +52,10 @@
 	padding-bottom: 0.5rem;
 	display: inline-block;
 	margin-bottom: 8pt;
+    
+    @include desktop {
+        max-width: 30%;
+    }
 }
 
 .footer__link{
