@@ -12,8 +12,8 @@ An MIT licensed template bundled with a minimal style guide to build websites fa
 4. run ```npm install``` within the project dir
 5. Start NetBeans and configure its preferences (HTML5 pane) to make it find npm and node (and gulp)
 6. Open the checked out project using NetBeans
-6. Install "bartsidee-nb-ejs.nbm" from "netbeans_plugin" directory via "Tools" -> "Plugins" and restart IDE
-7. Make NetBeans code highlight the ejs template files correctly (src/docs):
+7. Install "bartsidee-nb-ejs.nbm" from "netbeans_plugin" directory via "Tools" -> "Plugins" and restart IDE
+8. In case code highlighting for the ejs template files is not yet working correctly (src/docs):
     - Go to Tools -> Options (or Preferences)
     - Click on Miscellaneous Tab then Files tab
     - click the "New" button
