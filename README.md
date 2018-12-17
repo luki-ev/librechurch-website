@@ -8,7 +8,7 @@ An MIT licensed template bundled with a minimal style guide to build websites fa
 
 1. Install node and npm
 2. Install NetBeans 8.2 (9.0 does not seem to support HTML5/JS and node yet)
-3. Checkout the project only using git (without using NetBeans)
+3. Checkout the project using git only (without using NetBeans)
 4. run ```npm install``` within the project dir
 5. Start NetBeans and configure its preferences (HTML5 pane) to make it find npm and node (and gulp)
 6. Open the checked out project using NetBeans
