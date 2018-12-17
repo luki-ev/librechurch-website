@@ -14,8 +14,8 @@ gulp.task('theme_scripts', function(){
 	return gulp.src(glob)
 	.pipe(order(['*jquery.min.js*'])) // If jQuery is included, move to the top
 	.pipe(concat('app.js'))
-	.pipe(gulp.dest('Evie/js'))
+	.pipe(gulp.dest('public/js'))
 	.pipe(uglify())
 	.pipe(rename({ extname: '.min.js' }))
-	.pipe(gulp.dest('Evie/js'))
+	.pipe(gulp.dest('public/js'))
 });

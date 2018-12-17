@@ -14,8 +14,8 @@ gulp.task('theme_style', function() {
 	return gulp.src('./src/theme/sass/style.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(postcss([flexibility]))
-	.pipe(gulp.dest('Evie/css'))
+	.pipe(gulp.dest('public/css'))
 	.pipe(postcss(plugins))
 	.pipe(rename({ extname: '.min.css' }))
-	.pipe(gulp.dest('Evie/css'))
+	.pipe(gulp.dest('public/css'))
 });

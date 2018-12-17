@@ -12,5 +12,5 @@ gulp.task('theme_views',function(){
 	.pipe((replace(/href\s*=\s*(['"])\/(.*?)(['"])/g,'href="./$2.html"')))
 	.pipe(replace("./.html", "index.html"))
 	.pipe(ejs({ asset: function(assetLoc){ return assetLoc; }, convertType: ".html"}, {}, { ext: '.html' }).on('error', log))
-	.pipe(gulp.dest('./Evie'))
+	.pipe(gulp.dest('./public'))
 });
