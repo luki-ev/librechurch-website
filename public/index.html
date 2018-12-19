@@ -4,7 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>LibreChurch - Freie Software für eine freie Kirche</title>
-	<!-- Don't forget to add your metadata here -->
+	<meta name="description" content="An MIT licensed template bundled with a minimal style guide to build websites faster. Extemely lightweight, customizable and production-ready." />
+    <meta name="robots" content="index, follow"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Evie Theme by unDraw" />
+    <meta property="og:url" content="https://evie.undraw.co" />
+    <meta property="og:description" content="An MIT licensed template bundled with a minimal style guide to build websites faster. Extemely lightweight, customizable and production-ready." />
+    <meta property="og:image" content="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/assets/undraw__evie_meta.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Evie Theme by unDraw" />
+    <meta name="twitter:description" content="An MIT licensed template bundled with a minimal style guide to build websites faster. Extemely lightweight, customizable and production-ready." />
+    <meta name="twitter:image" content="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/assets/undraw__evie_meta.png" />
+    <meta name="twitter:url" content="https://evie.undraw.co" />
+    <link rel="shortcut icon" href="favicon.ico">
 	<link rel='stylesheet' href='css/style.min.css' />
 </head>
 <body>
@@ -13,14 +26,14 @@
 		<nav class="nav__mobile"></nav>
 		<div class="container">
 			<div class="navbar__inner">
-                <a href="index.html" class="navbar__logo">LibreChurch</a>
+                <a href='#' class="navbar__logo">LibreChurch</a>
 				<nav class="navbar__menu">
 					<ul>
-						<li><a href="#">Vorhaben</a></li>
-						<li><a href="#">Werte</a></li>
-                        <li><a href="#">Zielgruppen</a></li>
-                        <li><a href="#">Unterstützen</a></li>
-                        <li><a href="#">Team</a></li>
+						<li><a href="#project" class="scroll">Vorhaben</a></li>
+						<li><a href="#values" class="scroll">Werte</a></li>
+                        <li><a href="#audience" class="scroll">Zielgruppen</a></li>
+                        <li><a href="#contact" class="scroll">Ansprechpartner</a></li>
+                        <li><a href="#back" class="scroll">Unterstützen</a></li>
 					</ul>
 				</nav>
 				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
@@ -37,20 +50,20 @@
 					<div class="hero__content__inner" id='navConverter'>
 						<h1 class="hero__title">Gemeinschaftlich und unabhängig arbeiten.<br/>Freie Software für eine freie Kirche.</h1>
 						<p class="hero__text"> Wir entwickeln nachhaltige IT-Lösungen für die digitale Kirche von morgen. Zuverlässige Online-Tools für Zusammenarbeit und Kommunikation. Dazu vernetzen wir die Arbeit der weltweiten Open-Source-Community mit der Kirche.</p>
-						<a href="#" class="button button__accent">Unterstützen</a>
-						<a href="#" class="button hero__button">Mehr erfahren</a>
+						<a href="#back" class="button button__accent scroll">Unterstützen</a>
+						<a href="#project" class="button hero__button scroll">Mehr erfahren</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="hero__sub">
-		<span id="scrollToNext" class="scroll">
+		<span id="scrollToNext">
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class='hero__sub__down' fill="currentColor" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3z"/></svg>
 		</span>
 	</div>
 	<!-- Steps -->
-	<div class="steps landing__section">
+	<div class="steps landing__section" id="project">
 		<div class="container">
 			<h2>Was haben wir vor?</h2>
 			<p>In unserem Entwicklungsprozess orientieren wir uns an den Anforderungen der Community. An diesen Bausteinen arbeiten wir von Anfang an:</p>
@@ -82,7 +95,7 @@
 		</div>
 	</div>
     <!-- Values -->
-	<div class="steps landing__section">
+	<div class="steps landing__section" id="values">
 		<div class="container">
 			<h2>Unsere Werte</h2>
 			<p>Wir orientieren uns an Maßstäben, die für Christinnen und Christen wichtig sind – übertragen auf IT-Lösungen:</p>
@@ -101,26 +114,26 @@
 						<img src="./images/undraw_gdpr_3xfb.svg" class="step__image">
 					</div>
 					<h4>Datenschutz</h4>
-					<p class="step__text">Wir entwickeln Lösungen entsprechend den Regelungen der EU-DSGVO und der kirchlichen Datenschutzrechte. Bei der Entwicklung unserer Lösungen ist Datenschutz Voraussetzung und keine Behinderung.</p>
+					<p class="step__text">Wir entwickeln Lösungen entsprechend den Regelungen der EU-DSGVO und der kirchlichen Datenschutzgesetze. Bei der Entwicklung unserer Lösungen ist Datenschutz Voraussetzung und keine Behinderung.</p>
 				</div>
 				<div class="step">
 					<div class="step__media">
 						<img src="./images/undraw_maintenance_cn7j.svg" class="step__image">
 					</div>
 					<h4>Digitale Souveränität</h4>
-					<p class="step__text">Lösungen mit freier Software können Sie jederzeit auf Ihrer eigenen Infrastruktur betreiben. Ihre Daten gehören Ihnen. Wir unterstützen Sie, auch bei der Suche nach Partnern für den Betrieb der Infrastruktur.</p>
+					<p class="step__text">Lösungen mit Freier Software kannst du jederzeit auf der Infrastruktur deiner Organisation betreiben. Ihre Daten gehören ihr. Wir unterstützen sie, auch bei der Suche nach Partnern für den Betrieb der Infrastruktur.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Expanded sections -->
-	<div class="expanded landing__section">
+	<div class="expanded landing__section" id="audience">
 		<div class="container">
 			<h2>Für wen ist das Projekt?</h2>
 			<p>Langfristig sollen Kirchengemeinden und Pfarreien unsere Lösungen mit Hilfe von Partnern aus der Wirtschaft nutzen können. Aktuell richten wir uns an:</p>
 		</div>
     </div>
-	<div class="expanded landing__section">
+	<div class="expanded landing__section" id="back">
 		<div class="container">
 			<div class="expanded__inner">
 				<div class="expanded__media">
@@ -128,7 +141,7 @@
 				</div>
 				<div class="expanded__content">
 					<h2 class="expanded__title">Spenden</h2>
-                    <p class="expanded__text">Wir arbeiten ehrenamtlich und finanzieren die kostenpflichtigen Dienste über Spenden aus der Community. Ein großer Teil der Kosten wir von den Mitgliedern des LUKi e.V. getragen.<br/>
+                    <p class="expanded__text">Wir arbeiten ehrenamtlich und finanzieren die kostenpflichtigen Dienste über Spenden aus der Community. Ein großer Teil der Kosten wird von den Mitgliedern des LUKi e.V. getragen.<br/>
                     Du kannst uns helfen, die benötigte Infrastruktur zu buchen. Danke für deine Unterstützung!</p>
 				</div>
 			</div>
@@ -140,8 +153,8 @@
 			<div class="cta__inner">
 				<h2 class="cta__title">Unterstütze das LibreChurch-Projekt</h2>
 				<p class="cta__sub cta__sub--center">Durch deine Mitgliedschaft beim LUKi e.V. oder deine Spende förderst du die Entwicklung:</p>
-				<a href="#" class="button button__accent">Mitglied werden</a>
-                <a href="#" class="button hero__button">Spenden</a>
+				<a href="https://luki.org/verein-luki-e-v/mitgliedschaft/" class="button button__accent" target="_blank">Mitglied werden</a>
+                <a href="" class="button hero__button">Spenden (bald möglich)</a>
 			</div>
 		</div>
 	</div>
@@ -149,7 +162,7 @@
 	<div class="footer footer--dark">
 		<div class="container">
 			<div class="footer__inner">
-				<a href="index.html" class="footer__textLogo">LibreChurch</a>
+				<a href='#' class="footer__textLogo">LibreChurch</a>
 				<div class="footer__data">
 					<div class="footer__data__item">
 						<div class="footer__row">
@@ -163,14 +176,14 @@
 						</div>
 					</div>
 					<div class="footer__data__item">
-                        <div class="footer__row">Created with Open Sources from <a href="https://evie.undraw.co/" target="_blank" class="footer__link">Evie Theme</a>.
-						</div>
                         <div class="footer__row">
                             <a href="https://twitter.com/lukiev" target="_blank" class="footer__link">Twitter</a>
                         </div>
                         <div class="footer__row">
                             Mastodon (demnächst!)
                         </div>
+                        <div class="footer__row">Created with Open Sources from <a href="https://evie.undraw.co/" target="_blank" class="footer__link">Evie Theme</a>.
+						</div>
                         <div class="footer__row">
                             &copy; LUKi e.V. 2018<br/>Lizenzen: <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" class="footer__link">CC-BY-SA 3.0</a> und <a href="https://www.gnu.org/licenses/fdl.html" target="_blank" class="footer__link">GFDL 1.3</a>
                         </div>
