@@ -60,6 +60,26 @@ document.addEventListener('DOMContentLoaded',function(){
 			elements[i].className = elements[i].className.replace(reg,' ');
 		}
 	}
+    
+    // Responsive mobile menu
+	// Create the menu 
+	if (document.getElementsByClassName("nav__mobile") && document.getElementsByClassName('nav__mobile').length > 0){
+		var navElements = document.getElementsByClassName('navbar__menu')[0].innerHTML;
+		document.getElementsByClassName('nav__mobile')[0].innerHTML = navElements;
+		// Load 
+		var nav = responsiveNav(".nav__mobile", { // Selector
+			animate: true, // Boolean: Use CSS3 transitions, true or false
+			transition: 284, // Integer: Speed of the transition, in milliseconds
+			label: "Menu", // String: Label for the navigation toggle
+			insert: "before", // String: Insert the toggle before or after the navigation
+			customToggle: "toggle", // Selector: Specify the ID of a custom toggle
+			openPos: "relative", // String: Position of the opened nav, relative or static
+			navClass: "nav__mobile", // String: Default CSS class. If changed, you need to edit the CSS too!
+		});
+	} else {
+		 addNewClass(document.querySelector('.navbar__menu'),'navbar__menu--noMob');
+		 addNewClass(document.querySelector('.navbar__menu-mob'), 'navbar__menu-mob--noMob');
+	};	
 
 	// Smooth scrolling => https://codepen.io/andylobban/pen/qOLKVW
 	if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) {
@@ -74,13 +94,14 @@ document.addEventListener('DOMContentLoaded',function(){
             // Scroll the page by an increment, and check if it's time to stop
             var animateScroll = function () {
                 window.scrollBy(0, increments);
-                
+
                 var travelled = window.pageYOffset;
-                
-                // Scrolling down or up or end of document
-                if ( (increments >= 0 && (travelled >= (endLocation - increments))) ||
-                        ( increments < 0 && (travelled <= (endLocation - increments)) ) ||
-                        ((window.innerHeight + travelled) >= document.body.offsetHeight) ) {
+
+                // Stop animation when endLocation is reached
+                // Either when scrolling down or up or end of document
+                if ((increments >= 0 && (travelled >= (endLocation - increments))) ||
+                        (increments < 0 && (travelled <= (endLocation - increments))) ||
+                        ((window.innerHeight + travelled) >= document.body.offsetHeight)) {
                     clearInterval(runAnimation);
                 }
             };
@@ -104,7 +125,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 
                 // If the anchor exists
                 if (dataTarget) {
-                // Scroll to the anchor
+                    // Scroll to the anchor
                     smoothScroll(dataTarget, dataSpeed || 700);
                 }
             }, false);
@@ -112,42 +133,30 @@ document.addEventListener('DOMContentLoaded',function(){
 	}
 
 	
-		// Listen to scroll position changes
-	window.addEventListener("scroll",function(){
+    // Listen to scroll position changes
+    window.addEventListener("scroll", function () {
 
-		// NAVIGATION BAR ON LANDING FIXED
-		// If there is a #navConverter element then attach listener to scroll events
-		if (document.body.contains(document.getElementById("navConverter"))){
-			var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-			// if the current body position is less than 20 pixels away from our converter, convert
-			if (lastScrollTop > (getOffset( document.getElementById('navConverter') ).top - 60)){ removeClass(document.querySelector('.navbar'),'navbar--extended');} else {addNewClass(document.querySelector('.navbar'),'navbar--extended');}
-		}
+        // NAVIGATION BAR ON LANDING FIXED
+        // If there is a #navConverter element then attach listener to scroll events
+        if (document.body.contains(document.getElementById("navConverter"))) {
+            var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            // if the current body position is less than 20 pixels away from our converter, convert
+            if (lastScrollTop > (getOffset(document.getElementById('navConverter')).top - 60)) {
+                removeClass(document.querySelector('.navbar'), 'navbar--extended');
+            } else {
+                addNewClass(document.querySelector('.navbar'), 'navbar--extended');
+            }
+        }
 
-		// SCROLL TO NEXT ELEMENT ON LANDING
-		if (document.body.contains(document.getElementById('scrollToNext'))){
-			var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-			// if the current body position is less than 20 pixels away from the top, hide the icon
-			if (lastScrollTop > 20){ addNewClass(document.getElementById('scrollToNext'),'invisible');} else {removeClass(document.getElementById('scrollToNext'),'invisible');}
-		}
-	});
-
-	// Responsive mobile menu
-	// Create the menu 
-	if (document.getElementsByClassName("nav__mobile") && document.getElementsByClassName('nav__mobile').length > 0){
-		var navElements = document.getElementsByClassName('navbar__menu')[0].innerHTML;
-		document.getElementsByClassName('nav__mobile')[0].innerHTML = navElements;
-		// Load 
-		var nav = responsiveNav(".nav__mobile", { // Selector
-			animate: true, // Boolean: Use CSS3 transitions, true or false
-			transition: 284, // Integer: Speed of the transition, in milliseconds
-			label: "Menu", // String: Label for the navigation toggle
-			insert: "before", // String: Insert the toggle before or after the navigation
-			customToggle: "toggle", // Selector: Specify the ID of a custom toggle
-			openPos: "relative", // String: Position of the opened nav, relative or static
-			navClass: "nav__mobile", // String: Default CSS class. If changed, you need to edit the CSS too!
-		});
-	} else {
-		 addNewClass(document.querySelector('.navbar__menu'),'navbar__menu--noMob');
-		 addNewClass(document.querySelector('.navbar__menu-mob'), 'navbar__menu-mob--noMob');
-	};	
+        // SCROLL TO NEXT ELEMENT ON LANDING
+        if (document.body.contains(document.getElementById('scrollToNext'))) {
+            var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            // if the current body position is less than 20 pixels away from the top, hide the icon
+            if (lastScrollTop > 20) {
+                addNewClass(document.getElementById('scrollToNext'), 'invisible');
+            } else {
+                removeClass(document.getElementById('scrollToNext'), 'invisible');
+            }
+        }
+    });
 });
