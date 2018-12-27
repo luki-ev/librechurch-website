@@ -8,6 +8,12 @@ meter {
   border-radius: 0.25em;
 }
 
+meter::-webkit-meter-bar {
+  background: none; /* Required to get rid of the default background property */
+  background-color: $primary-dark;
+  box-shadow: 0 0.25em 0.25em -0.25em $text inset;
+}
+
 meter::-webkit-meter-optimum-value {
   background: $success;
   box-shadow: 0 0.25em 0.25em -0.25em $text inset;
