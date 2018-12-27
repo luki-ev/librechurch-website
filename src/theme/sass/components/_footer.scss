@@ -76,6 +76,10 @@
 	margin-bottom: 8pt;
 }
 
+.footer__row img {
+    max-height: 31px;
+}
+
 /*--- Modifiers---*/
 .footer--dark{
 	background-color: $background-dark;
