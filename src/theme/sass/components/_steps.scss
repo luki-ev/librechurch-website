@@ -1,16 +1,16 @@
-.steps{
+.steps, .contact{
 	text-align: center;
 	padding: 16pt 0;
 }
 
-.steps__inner{
+.steps__inner, .contact__inner{
 	@include desktop{
 		display: flex;
 		justify-content: space-around;
 	}
 }
 
-.step{
+.step, .contact{
 	padding: 16pt 0;
 	text-align: center;
 	width: 100%;
@@ -27,7 +27,7 @@
 	}
 }
 
-.step__media{
+.step__media {
 	margin: 16pt 0;
 
 	@include desktop{
@@ -35,10 +35,18 @@
 	}
 }
 
-.step__image{
+.contact__media {
+ 	margin: 4pt 0;
+
+	@include desktop{
+		margin: 8pt 0;
+	}
+}
+
+.step__image, .contact__image{
 	max-height: 100px;
 	max-width: 222px;
-	margin-top: 8pt;
+	margin-top: 0pt;
 	@include noDragging;
 
 	@include tablet{
@@ -46,9 +54,25 @@
 	}
 }
 
-.step__text{
+.contact__image {
+    border-radius: 50% !important;
+    max-height: 150px;
+}
+
+.contact h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.step__text, .contact__description{
 	max-width: 36ch;
 	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.contact__description {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
 }
