@@ -10,6 +10,19 @@
 	}
 }
 
+.steps__inner a {
+	border-bottom: 1px dotted $text;
+	padding-bottom: 1pt;
+	transition: 0.7s;
+
+	@include desktop{
+		&:hover{
+			color: $text-dark;
+			border-color: $text-dark;
+		}
+	}
+}
+
 .step, .contact{
 	padding: 16pt 0;
 	text-align: center;

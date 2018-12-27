@@ -999,6 +999,15 @@ meter::-moz-meter-bar {
     display: flex;
     justify-content: space-around; } }
 
+.steps__inner a {
+  border-bottom: 1px dotted #666;
+  padding-bottom: 1pt;
+  transition: 0.7s; }
+  @media (min-width: 992px) {
+    .steps__inner a:hover {
+      color: #111;
+      border-color: #111; } }
+
 .step, .contact {
   padding: 16pt 0;
   text-align: center;
@@ -1058,6 +1067,15 @@ meter::-moz-meter-bar {
 
 .expanded {
   padding: 72pt 0; }
+
+.expanded a {
+  border-bottom: 1px dotted #666;
+  padding-bottom: 1pt;
+  transition: 0.7s; }
+  @media (min-width: 992px) {
+    .expanded a:hover {
+      color: #111;
+      border-color: #111; } }
 
 .expanded__inner {
   -js-display: flex;

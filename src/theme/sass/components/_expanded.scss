@@ -2,6 +2,19 @@
 	padding: 72pt 0;
 }
 
+.expanded a {
+	border-bottom: 1px dotted $text;
+	padding-bottom: 1pt;
+	transition: 0.7s;
+
+	@include desktop{
+		&:hover{
+			color: $text-dark;
+			border-color: $text-dark;
+		}
+	}
+}
+
 .expanded__inner{
 	display: flex;
 	justify-content: space-between;

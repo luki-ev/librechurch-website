@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded',function(){
             var startLocation = window.pageYOffset;
             var endLocation = anchor.offsetTop - 40; // Remove 40 pixels for padding
             var distance = endLocation - startLocation;
-            var increments = distance/(duration/16);
+            var increments = distance/(duration/4);
             
             // Scroll the page by an increment, and check if it's time to stop
             var animateScroll = function () {
@@ -100,14 +100,13 @@ document.addEventListener('DOMContentLoaded',function(){
                 // Stop animation when endLocation is reached
                 // Either when scrolling down or up or end of document
                 if ((increments >= 0 && (travelled >= (endLocation - increments))) ||
-                        (increments < 0 && (travelled <= (endLocation - increments))) ||
-                        ((window.innerHeight + travelled) >= document.body.offsetHeight)) {
+                        (increments < 0 && (travelled <= endLocation))) {
                     clearInterval(runAnimation);
                 }
             };
             
             // Loop the animation function
-            var runAnimation = setInterval(animateScroll, 16);
+            var runAnimation = setInterval(animateScroll, 4);
         };
         
 		// Define smooth scroll links
