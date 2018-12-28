@@ -989,7 +989,7 @@ meter::-moz-meter-bar {
 .hero--full + .hero__sub {
   display: none; }
 
-.steps, .contact {
+.steps {
   text-align: center;
   padding: 16pt 0; }
 
@@ -1009,7 +1009,7 @@ meter::-moz-meter-bar {
       border-color: #111; } }
 
 .step, .contact {
-  padding: 16pt 0;
+  padding: 16pt 12pt;
   text-align: center;
   width: 100%;
   border-top: 1px solid #eee;
