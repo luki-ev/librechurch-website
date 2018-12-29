@@ -1,4 +1,4 @@
-/*! responsive-nav.js 1.0.39
+/*! responsive-nav.js 1.0.40 (with fix for LibreChurch project)
  * https://github.com/viljamis/responsive-nav.js
  * http://responsive-nav.com
  *
