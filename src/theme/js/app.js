@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded',function(){
 			label: "Menu", // String: Label for the navigation toggle
 			insert: "before", // String: Insert the toggle before or after the navigation
 			customToggle: "toggle", // Selector: Specify the ID of a custom toggle
+            closeOnNavClick: true, // Bool: Close menu after clicking on a link
 			openPos: "relative", // String: Position of the opened nav, relative or static
 			navClass: "nav__mobile", // String: Default CSS class. If changed, you need to edit the CSS too!
 		});
