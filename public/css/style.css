@@ -1190,6 +1190,9 @@ meter::-moz-meter-bar {
       min-width: 25%;
       font-size: 1.325rem; } }
 
+.footer__textLogo img {
+  max-width: 5.5em; }
+
 .footer__data {
   -js-display: flex;
   display: flex;
