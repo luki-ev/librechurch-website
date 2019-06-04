@@ -789,7 +789,12 @@ meter::-moz-meter-bar {
   font-size: 1.325rem;
   transition: 0;
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  padding: 2em 0 2em 2.3em;
+  background-image: url(../images/librechurch_header.png);
+  background-repeat: no-repeat;
+  background-size: 1.8em;
+  background-position: 0em 2.2em; }
 
 .navbar__menu {
   display: none; }
