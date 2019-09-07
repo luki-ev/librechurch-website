@@ -2,6 +2,7 @@
 
 const CACHE_FILE = __DIR__ . '/toots-cache.html';
 const CACHE_TTL_SECONDS = 30 * 60;
+const TOOTS_RSS_URL = 'https://kirche.social/@librechurch.rss';
 const NUMBER_OF_TOOTS = 3;
 
 class MastodonRssParser
@@ -43,7 +44,7 @@ class MastodonRssParser
 function createItemsHtml(): string
 {
     $html = '';
-    foreach (MastodonRssParser::parseItemsFromUrl('https://kirche.social/@librechurch.rss', NUMBER_OF_TOOTS) as $item) {
+    foreach (MastodonRssParser::parseItemsFromUrl(TOOTS_RSS_URL, NUMBER_OF_TOOTS) as $item) {
         $pubDate = date('d.m.Y H:i:s', strtotime($item['pubDate']));
         $description = $item['description'];
         $html .= <<<EOD
