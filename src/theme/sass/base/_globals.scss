@@ -10,6 +10,11 @@ html{
 .invisible{
 	opacity: 0;
 	transition: 0.7s;
+        display: none;
+}
+
+.ellipsis:after{ 
+        content: "…";
 }
 
 .fakefield{

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -323,7 +324,11 @@ html {
 
 .invisible {
   opacity: 0;
-  transition: 0.7s; }
+  transition: 0.7s;
+  display: none; }
+
+.ellipsis:after {
+  content: "…"; }
 
 .fakefield {
   display: none; }
