@@ -50,7 +50,7 @@
                         <div class="hero__content__inner" id='navConverter'>
                             <h1 class="hero__title">Gemeinschaftlich und unabhängig arbeiten.<br/>Freie Software für eine freie Kirche.</h1>
                             <p class="hero__text">Wir entwickeln nachhaltige IT-Lösungen für die digitale Kirche von morgen. Zuverlässige Online-Tools für Zusammenarbeit und Kommunikation. Dazu vernetzen wir die Arbeit der weltweiten Open-Source-Community mit der Kirche.</p>
-                            <a href="#project" class="button hero__button scroll">Mehr erfahren</a>
+                            <a href="#mastodon" class="button hero__button scroll">Mehr erfahren</a>
                             <a href="#back" class="button button__accent scroll">Unterstützen</a>
                         </div>
                     </div>
@@ -58,9 +58,25 @@
             </div>
         </div>
         <div class="hero__sub">
-            <a href="#project" class="scroll" id="scrollToNext">
+            <a href="#mastodon" class="scroll" id="scrollToNext">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class='hero__sub__down' fill="currentColor" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3z"/></svg>
             </a>
+        </div>
+        <!-- Mastodon -->
+        <div class="steps landing__section" id="mastodon">
+            <div class="container">
+                <div class="steps__inner">
+                    <div class="step">
+                        <h2>News</h2>
+                        <p>Aktuelle Beiträge in <a href="https://kirche.social/@librechurch" rel="nofollow noopener" target="_blank">Mastodon</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="steps__inner">
+                    <?php include('mastodon.php'); ?>
+                </div>
+            </div>
         </div>
         <!-- Steps -->
         <div class="steps landing__section" id="project">
@@ -238,7 +254,7 @@
                               ltr = coded.charAt(i)
                               link += (ltr)
                             }
-                            else {     
+                            else {
                               ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
                               link += (key.charAt(ltr))
                             }
@@ -262,9 +278,9 @@
                     <div class="expanded__content">
                         <h2 class="expanded__title">Spenden</h2>
                         <p class="expanded__text">
-                            Wir finanzieren die kostenpflichtigen Dienste über Spenden aus der Community. 
+                            Wir finanzieren die kostenpflichtigen Dienste über Spenden aus der Community.
                         </p>
-                        <p>    
+                        <p>
                             Die Anschubfinanzierung in Höhe von knapp 2400€ (2399,64€) wurde im Wesentlichen durch Spenden und Spendenzusagen der Mitglieder des <a href="https://luki.org/" target="_blank">LUKi e.V.</a> geleistet.<br/><b>Ein herzliches Dankeschön allen Unterstützerinnen und Unterstützern. Dadurch kann unsere Infrastruktur für die nächsten zwei Jahre (bis Februar 2021) finanziert werden.</b>
                         </p>
                         <p>
