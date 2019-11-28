@@ -916,6 +916,15 @@ meter::-moz-meter-bar {
     position: relative;
     z-index: 3; }
 
+.hero__text a {
+  border-bottom: 1px dotted #ffffff;
+  padding-bottom: 1pt;
+  transition: 0.7s; }
+  @media (min-width: 992px) {
+    .hero__text a:hover {
+      color: #E1531A;
+      border-color: #E1531A; } }
+
 .hero__overlay {
   position: absolute;
   height: 100%;
