@@ -21,3 +21,7 @@ jobs:
         node-version: 12.x
     - run: npm install
     - run: npx gulp build
+    - uses: actions/upload-artifact@v1
+      with:
+        name: site
+        path: public
