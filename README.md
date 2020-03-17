@@ -29,6 +29,7 @@ Srcs:
 ## Usage
 
 1. Make your changes within the "src" directory.
-2a. NetBeans: Click the "build" or "run" button of NetBeans.
-2b. Command line: run "npx gulp build" in this folder.
+2. Choose NetBeans or Command line:
+  a. NetBeans: Click the "build" or "run" button of NetBeans.
+  b. Command line: run "npx gulp build" in this folder.
 3. You'll find the generated site meant to be served/deployed inside the "public" directory.
