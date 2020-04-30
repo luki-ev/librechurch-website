@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/anges244/evie#readme",
   "dependencies": {
-    "ejs": "^2.7.1",
+    "ejs": "^2.7.4",
     "express": "^4.17.1",
-    "morgan": "^1.9.0"
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.1.0",
@@ -46,7 +46,7 @@
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace-path": "^0.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
     "gulp-zip": "^4.1.0",
