@@ -306,14 +306,18 @@
                     </div>
                     <div class="expanded__content">
                         <h2 class="expanded__title">Projektstand</h2>
-                        <p class="expanded__text">
-                            Die Anschubfinanzierung in Höhe von knapp 2400€ (2399,64€) wurde im Wesentlichen durch Spenden und Spendenzusagen der Mitglieder des <a href="https://luki.org/" target="_blank">LUKi e.V.</a> geleistet.</p>
-                        <p class="expanded__text"><b>Ein herzliches Dankeschön allen Unterstützerinnen und Unterstützern. Dadurch kann unsere Basis-Infrastruktur bis Februar 2021 finanziert werden.</b>
-                        </p>
                         <p>
-                            Für die dauerhafte Finanzierung der der Technik brauchen wir weitergehende Spenden. Mit zunehmender Nutzer_innenzahlen steigen auch unsere Ausgaben. Du kannst uns helfen, die benötigte Infrastruktur langfristig zu unterhalten. Danke für deine Unterstützung!</p>
-                        <p class="expanded__text">Zusagen direkter, regelmäßiger Spenden (ohne die Spenden via <a href="https://www.betterplace.org/de/projects/77247-librechurch-freie-softwarelosungen-fur-die-digitale-kirche-der-zukunft" target="_blank">betterplace.org</a>), Stand 17.03.2020: 862,00 € von derzeit 1320€ / Jahr
-                            <meter value="862.00" min="0" max="1320">862,00 € von derzeit 1320€ / Jahr</meter>
+                            Unsere Dienste erfreuen sich einer großen und steigenden Nachfrage. Dadurch steigen auch unsere Ausgaben stetig. Nur durch durch weitere Spenden kann der Betrieb gesichert werden. Danke für deine Unterstützung!</p>
+                        <p class="expanded__text">
+                            Die Anschubfinanzierung in Höhe von knapp 3600€ wurde durch größere Einzelspenden und Spendenzusagen der Mitglieder des <a href="https://luki.org/" target="_blank">LUKi e.V.</a> geleistet.</p>
+                        <p class="expanded__text"><b>Ein herzliches Dankeschön allen Unterstützerinnen und Unterstützern.</b>
+                        </p>
+                        <?php
+                            $donation_current = 892;
+                            $donation_needed = 2400;
+                        ?>
+                        <p class="expanded__text">Zusagen direkter, regelmäßiger Spenden (ohne die Spenden via <a href="https://www.betterplace.org/de/projects/77247-librechurch-freie-softwarelosungen-fur-die-digitale-kirche-der-zukunft" target="_blank">betterplace.org</a>), Stand 25.06.2020: <?php echo $donation_current; ?>,00 € von derzeit <?php echo $donation_needed; ?>€ / Jahr
+                            <meter value="<?php echo $donation_current; ?>" min="0" max="<?php echo $donation_needed; ?>"><?php echo $donation_current; ?>,00 € von derzeit <?php echo $donation_needed; ?>€ / Jahr</meter>
                         </p>
                         <p class="expanded__text">Über die Fortschritte im Projektverlauf informieren wir im <a href="https://luki.org/" target="_blank">LUKi-Blog</a> und über unseren <a rel="me" href="https://kirche.social/@librechurch" target="_blank">Mastodon-Account.</a></p>
                     </div>
@@ -336,7 +340,7 @@
                                 <a href="https://luki.org/impressum/" target="_blank" class="footer__link">Impressum</a> | <a href="https://luki.org/impressum/datenschutz/" target="_blank" class="footer__link">Datenschutz</a>
                             </div>
                             <div class="footer__row">
-                                Inhaltlich verantwortlich: Johannes Brakensiek, Südseestr. 4, 45357 Essen
+                                Inhaltlich verantwortlich: Johannes Brakensiek, Am Helpoot 3, 45178 Duisburg
                             </div>
                         </div>
                         <div class="footer__data__item">
