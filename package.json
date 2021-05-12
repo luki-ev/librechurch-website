@@ -49,7 +49,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
-    "gulp-zip": "^4.1.0",
+    "gulp-zip": "^5.1.0",
     "postcss-flexibility": "^2.0.0",
     "require-dir": "^1.0.0"
   }
