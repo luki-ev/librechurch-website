@@ -2,7 +2,7 @@
 // Compile and export minified theme + docs SASS to the docs CSS ('docs/css/')
 
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const flexibility = require('postcss-flexibility');
 const rename = require('gulp-rename');
