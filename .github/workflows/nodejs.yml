@@ -25,3 +25,22 @@ jobs:
       with:
         name: public
         path: public
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/download-artifact@v2
+      with:
+        name: public
+        path: public
+    - name: Setup ssh keys
+      run: |
+        mkdir ~/.ssh
+        echo '${{ secrets.SSH_PRIVATE_KEY }}' > ~/.ssh/id_rsa
+        echo '${{ secrets.SSH_PUBLIC_KEY }}' > ~/.ssh/id_rsa.pub
+        chmod 400 ~/.ssh/id_rsa
+    - name: Deploy to librechurch.org
+      run: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc public/ lki01-librechurchweb@lki01.hostsharing.net:/home/pacs/lki01/users/librechurchweb/doms/librechurch.org/htdocs-ssl
