@@ -4,6 +4,7 @@
   "description": "LibreChurch Site based on evie template",
   "main": "app.js",
   "scripts": {
+    "build": "gulp build",
     "test": "test"
   },
   "repository": {
