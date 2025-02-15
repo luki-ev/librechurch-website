@@ -4,5 +4,5 @@ const gulp = require('gulp');
 const del = require('del');
 
 gulp.task('theme_clean', function(done) {
-	return del(['theme/**', 'public/**']);
+	return del(['public/**']);
 });
