@@ -4,7 +4,6 @@
 const gulp = require('gulp');
 const order = require('gulp-order');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
 
 gulp.task('docs_scripts', function(){
 	var glob = [];
@@ -17,6 +16,5 @@ gulp.task('docs_scripts', function(){
 	return gulp.src(glob)
 	.pipe(order(['*jquery.min.js*'])) // If jQuery is included, move to the top
 	.pipe(concat('app.min.js'))
-	.pipe(uglify())
 	.pipe(gulp.dest('docs/js'))
 });

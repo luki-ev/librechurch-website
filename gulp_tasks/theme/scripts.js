@@ -5,7 +5,6 @@ const gulp = require('gulp');
 const order = require('gulp-order');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
 
 gulp.task('theme_scripts', function(){
 	var glob = [];
@@ -15,7 +14,6 @@ gulp.task('theme_scripts', function(){
 	.pipe(order(['*jquery.min.js*'])) // If jQuery is included, move to the top
 	.pipe(concat('app.js'))
 	.pipe(gulp.dest('public/js'))
-	.pipe(uglify())
 	.pipe(rename({ extname: '.min.js' }))
 	.pipe(gulp.dest('public/js'))
 });
