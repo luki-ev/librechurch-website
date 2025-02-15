@@ -1,5 +1,46 @@
+const apiUrl = 'https://kirche.social/api/v1/accounts/13/statuses?limit=3&exclude_reblogs=true&exclude_replies=true';
+
+async function loadPostwall() {
+	const container = document.getElementById('mastodon-container');
+
+	async function fetchPosts() {
+		try {
+			const response = await fetch(apiUrl);
+			if (!response.ok) {
+				throw new Error('Fehler beim Laden der Posts');
+			}
+
+			const posts = await response.json();
+			renderPosts(posts);
+		} catch (error) {
+			console.error('Fehler:', error);
+			container.innerHTML = '<p>Fehler beim Laden der Posts.</p>';
+		}
+	};
+
+	function renderPosts(posts) {
+		container.innerHTML = '';
+
+		posts.forEach(post => {
+			const postDate = new Date(post.created_at).toLocaleString();
+			const content = post.content || 'Kein Inhalt verfügbar.';
+
+			const postElement = document.createElement('div');
+			postElement.classList.add('step__text');
+			postElement.innerHTML = `
+				<strong>${postDate}</strong>
+				${content}
+			`;
+			container.appendChild(postElement);
+		});
+	};
+
+	await fetchPosts();
+};
+
 // Equivalent of jQuery .ready
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded', async function () {
+	await loadPostwall();
 
 	// Initialize variables
 	var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop; // Scroll position of body

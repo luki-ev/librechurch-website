@@ -10,9 +10,9 @@ const replace = require('gulp-replace-path');
 gulp.task('theme_views',function(){
 	var myReg = /<a([^>]*?)href\s*=\s*(['"])([^\2]*?)\2\1*>/i;
 	return gulp.src('src/theme/*.ejs')
-	.pipe((replace(/href\s*=\s*(['"])\/(.*?)(['"])/g,'href="./$2.php"')))
-	.pipe(replace("./.php", "index.php"))
-	.pipe(ejs({ asset: function(assetLoc){ return assetLoc; }, convertType: ".php"}, {}).on('error', log))
-	.pipe(rename({ extname: '.php' }))
+	.pipe((replace(/href\s*=\s*(['"])\/(.*?)(['"])/g,'href="./$2.html"')))
+	.pipe(replace("./.html", "index.html"))
+	.pipe(ejs({ asset: function(assetLoc){ return assetLoc; }, convertType: ".html"}, {}).on('error', log))
+	.pipe(rename({ extname: '.html' }))
 	.pipe(gulp.dest('./public'))
 });
