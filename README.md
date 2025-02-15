@@ -32,3 +32,8 @@ Srcs:
 2. Either NetBeans: Click the "build" or "run" button of NetBeans.
 3. Or command line: run ```npm run build``` in this folder.
 4. You'll find the generated site meant to be served/deployed inside the "public" directory.
+
+## Development
+
+1. Change in "src" folder
+2. Run ```npm run dev``` to spin up a local webserver serving the site on localhost:7000
