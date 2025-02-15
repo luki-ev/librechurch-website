@@ -13,7 +13,7 @@ updates:
           - "*"  # Group all Actions updates into a single larger pull request
     schedule:
       interval: monthly
-- package-ecosystem: github-actions
+  - package-ecosystem: github-actions
     directory: /
     groups:
       github-actions:
