@@ -2,3 +2,5 @@ node_modules
 public
 /nbproject/private/
 .DS_Store
+/src/docs/public
+/src/theme/public
