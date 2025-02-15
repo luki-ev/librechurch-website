@@ -55,10 +55,8 @@ gulp.task('browser-sync',
 			gulp.watch(['src/*.ejs', 'src/**/*.ejs'],  gulp.parallel(reloader));
 			// SASS / CSS Watchers
 			gulp.watch(['src/theme/sass/**/*.scss','src/theme/sass/*.scss'], gulp.parallel('style_dev_theme'));
-			gulp.watch(['src/theme/sass/**/*.scss','src/theme/sass/*.scss','src/docs/sass/**/*.scss','src/docs/sass/*.scss'], gulp.parallel('style_dev_docs'));
 			// JS Watcher
 			gulp.watch(['src/theme/js/**/*.js'],gulp.parallel('scripts_dev_theme'));
-			gulp.watch(['src/theme/js/**/*.js', 'src/docs/js/**/*.js'],gulp.parallel('scripts_dev_docs'));
 		}
 	)
 );
@@ -66,7 +64,7 @@ gulp.task('browser-sync',
 /*--- Main Gulp Tasks---*/
 gulp.task('default', 
 	gulp.series('clean',
-		gulp.parallel('scripts_dev_docs','scripts_dev_theme','style_dev_docs','style_dev_theme'),
+		gulp.parallel('scripts_dev_theme','style_dev_theme'),
 		'browser-sync'
 	)
 );
@@ -75,11 +73,4 @@ gulp.task('default',
 gulp.task('build',
 	gulp.series( 'theme_assets',
 		gulp.parallel('theme_style', 'theme_scripts', 'theme_views'))
-);
-
-// Build docs => Production-ready documents to upload (build_docs)
-gulp.task('build_docs',
-	gulp.series('docs_clean',  'docs_assets', 'build',
-		gulp.parallel('docs_style', 'docs_scripts', 'docs_views'),
-		'zip', 'zip_docs','theme_clean')
 );

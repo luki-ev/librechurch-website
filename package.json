@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "build": "gulp build",
+    "dev": "gulp default",
+    "main": "node app.js",
     "test": "test"
   },
   "repository": {
