@@ -21,12 +21,12 @@
   ],
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.20.0",
+    "express": "^4.21.2",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
-    "browser-sync": "^2.27.7",
+    "browser-sync": "^3.0.3",
     "cssnano": "^5.1.12",
     "del": "^6.0.0",
     "dotenv": "^10.0.0",
