@@ -12,4 +12,4 @@ updates:
         patterns:
           - "*"  # Group all Actions updates into a single larger pull request
     schedule:
-      interval: monthly
+      interval: semiannually
