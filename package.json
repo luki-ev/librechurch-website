@@ -19,15 +19,13 @@
   "browserslist": [
     "defaults"
   ],
-  "dependencies": {
-    "express": "^4.22.2"
-  },
   "devDependencies": {
     "autoprefixer": "^10.5.0",
     "browser-sync": "^3.0.3",
     "cssnano": "^8.0.1",
     "del": "^6.0.0",
     "dotenv": "^10.0.0",
+    "express": "^5.2.1",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-nodemon": "^2.5.0",
