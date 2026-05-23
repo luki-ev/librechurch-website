@@ -2,7 +2,6 @@
 // Concat and export both minified and unminified JavaScript files theme folder ('theme/js/')
 
 const gulp = require('gulp');
-const order = require('gulp-order');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 
@@ -11,7 +10,6 @@ gulp.task('theme_scripts', function(){
 	glob.push('src/theme/js/libraries/**/*.js');
 	glob.push('src/theme/js/app.js');
 	return gulp.src(glob)
-	.pipe(order(['*jquery.min.js*'])) // If jQuery is included, move to the top
 	.pipe(concat('app.js'))
 	.pipe(gulp.dest('public/js'))
 	.pipe(rename({ extname: '.min.js' }))

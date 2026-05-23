@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const order = require('gulp-order');
 const concat = require('gulp-concat');
 
 gulp.task('scripts_dev_theme', function(){
@@ -8,7 +7,6 @@ gulp.task('scripts_dev_theme', function(){
 	glob.push('src/theme/js/libraries/**/*.js');
 	glob.push('src/theme/js/app.js');
 	return gulp.src(glob)
-	.pipe(order(['*jquery.min.js*'])) // If jQuery is included, move to the top
 	.pipe(concat('app.min.js'))
 	.pipe(gulp.dest('src/theme/public/js'))
 });
