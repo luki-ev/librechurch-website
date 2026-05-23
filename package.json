@@ -2,12 +2,8 @@
   "name": "librechurch-website",
   "version": "0.2.12",
   "description": "LibreChurch Site based on evie template",
-  "main": "app.js",
   "scripts": {
-    "build": "gulp build",
-    "dev": "gulp default",
-    "main": "node app.js",
-    "test": "test"
+    "dev": "serve-reload src --open"
   },
   "repository": {
     "type": "git",
@@ -16,19 +12,7 @@
   "author": "the librechurch team <support@librechurch.org>",
   "license": "MIT",
   "homepage": "https://librechurch.org",
-  "browserslist": [
-    "defaults"
-  ],
   "devDependencies": {
-    "browser-sync": "^3.0.3",
-    "del": "^6.0.0",
-    "dotenv": "^10.0.0",
-    "express": "^5.2.1",
-    "gulp": "^4.0.2",
-    "gulp-nodemon": "^2.5.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^6.0.1",
-    "require-dir": "^1.0.0",
-    "sass": "^1.100.0"
+    "serve-reload": "^1.0.1"
   }
 }

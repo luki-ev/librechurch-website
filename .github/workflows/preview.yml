@@ -19,14 +19,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Install and Build
-        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
-        run: |
-          npm ci
-          npm run build
-
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./public/
+          source-dir: ./src/
           wait-for-pages-deployment: true

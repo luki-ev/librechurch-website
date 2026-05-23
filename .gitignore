@@ -1,5 +1,2 @@
 node_modules
-public
 .DS_Store
-/src/docs/public
-/src/theme/public
