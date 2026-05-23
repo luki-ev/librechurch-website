@@ -1,3 +1,6 @@
+@use "../base/variables";
+@use "../utils/mixins";
+
 /* Vertical menu */
 .vMenu{
 	padding: 0;
@@ -6,9 +9,9 @@
 	max-width: 100%;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	border-bottom: 1px solid $line;
+	border-bottom: 1px solid variables.$line;
 
-	@include desktop{
+	@include mixins.desktop{
 		display: inline-block;
 		border-bottom: none;
 	}
@@ -19,7 +22,7 @@
 		width: 48%;
 		padding-left: 16pt;
 
-		@include desktop{
+		@include mixins.desktop{
 			padding-left: 0;
 			display: block;
 			width: auto;
@@ -29,19 +32,19 @@
 	a{
 		display: block;
 
-		@include desktop{
+		@include mixins.desktop{
 			display: inline-block;
 			opacity: 0.85;
 
 			&:hover{
 				opacity: 1;
-				color: $primary;
+				color: variables.$primary;
 			}
 
 			&:after {
 				display: block;
 				content: '';
-				border-bottom: 1px solid $primary;  
+				border-bottom: 1px solid variables.$primary;  
 				transform: scaleX(0);  
 				transition: transform 250ms ease-in-out;
 			}
@@ -69,21 +72,21 @@
 }
 
 .vMenu--active{
-	color: $primary;
+	color: variables.$primary;
 	
 	&:before{
 		content: "\2014";
 		margin-right: 0.333em;
 	}
 
-	@include desktop{
+	@include mixins.desktop{
 		opacity: 1;
-		color: $primary;
+		color: variables.$primary;
 
 		&:after {
 			display: block;
 			content: '';
-			border-bottom: 1px solid $primary;  
+			border-bottom: 1px solid variables.$primary;  
 			transform: none;  
 			transition: none;
 		}

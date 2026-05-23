@@ -1,29 +1,29 @@
 // Unicode characters
 @charset "UTF-8";
-@import "elements/lato";
+@use "elements/lato";
 
-@import "utils/normalize";
-@import "base/variables";
-@import "utils/mixins";
-@import "base/globals";
-@import "base/containers";
-@import "utils/helpers";
+@use "utils/normalize";
+@use "base/variables";
+@use "utils/mixins";
+@use "base/globals";
+@use "base/containers";
+@use "utils/helpers";
 
 // Elements
-@import "elements/typography";
-@import "elements/buttons";
-@import "elements/forms";
-@import "elements/meter";
+@use "elements/typography";
+@use "elements/buttons";
+@use "elements/forms";
+@use "elements/meter";
 
 // Components
-@import "components/landing";
-@import "components/navbar";
-@import "components/hero";
-@import "components/steps";
-@import "components/expanded";
-@import "components/cta";
-@import "components/footer";
-@import "components/auth";
-@import "components/page";
-@import "components/app";
-@import "components/verticalMenu";
+@use "components/landing";
+@use "components/navbar";
+@use "components/hero";
+@use "components/steps";
+@use "components/expanded";
+@use "components/cta";
+@use "components/footer";
+@use "components/auth";
+@use "components/page";
+@use "components/app";
+@use "components/verticalMenu";

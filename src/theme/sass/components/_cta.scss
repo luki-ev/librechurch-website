@@ -1,20 +1,22 @@
+@use "../base/variables";
+
 .cta{
-	background: linear-gradient(to right, $primary, $secondary);
+	background: linear-gradient(to right, variables.$primary, variables.$secondary);
 	color: #fff;
 	padding: 48pt 0;
 	text-align: center;
 }
 
 .cta--reverse{
-	background: linear-gradient(to left, $primary, $secondary);
+	background: linear-gradient(to left, variables.$primary, variables.$secondary);
 }
 
 .cta--plain{
-	background: $primary;
+	background: variables.$primary;
 }
 
 .cta--secondary{
-	background: $secondary;
+	background: variables.$secondary;
 }
 
 .cta__title{

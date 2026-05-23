@@ -1,3 +1,5 @@
+@use "../base/variables";
+
 @mixin noSelect {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -23,25 +25,25 @@
 		only screen and (min-device-pixel-ratio: 2),
 		only screen and (min-resolution: 192dpi),
 		only screen and (min-resolution: 2dppx),
-		only screen and (max-width: #{$tablet-width - 1px}) {
+		only screen and (max-width: #{variables.$tablet-width - 1px}) {
 		@content;
 	}
 }
 
 @mixin tablet {
-	@media (min-width: #{$tablet-width}) {
+	@media (min-width: #{variables.$tablet-width}) {
 		@content;
 	}
 }
 
 @mixin desktop {
-	@media (min-width: #{$desktop-width}) {
+	@media (min-width: #{variables.$desktop-width}) {
 		@content;
 	}
 }
 
 @mixin huge {
-	@media (min-width: #{$huge-width}) {
+	@media (min-width: #{variables.$huge-width}) {
 		@content;
 	}
 }

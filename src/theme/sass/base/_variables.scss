@@ -1,8 +1,9 @@
+@use "sass:color";
 // Colors
 $primary: #32B4B6;
 $secondary: #1C8E91;
 $accent: #E1531A;
-$primary-dark: darken($primary,8%);
+$primary-dark: color.adjust($primary,$lightness: -8%);
 $text: #666;
 $text-dark: #111;
 $background: #ffffff;

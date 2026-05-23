@@ -1,9 +1,12 @@
+@use "../base/variables";
+@use "../utils/mixins";
+
 html{
-	font-family: $font;
-	font-size: $font-size;
-	color: $text;
-	line-height: $line-height;
-	font-weight: $normal;
+	font-family: variables.$font;
+	font-size: variables.$font-size;
+	color: variables.$text;
+	line-height: variables.$line-height;
+	font-weight: variables.$normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
@@ -17,15 +20,15 @@ p{
 h1, h2, h3, h4 {
 	margin: 1.414em 0 0.5em;
 	line-height: 1.35;
-	color: $text-dark;
-	font-weight: $normal;
+	color: variables.$text-dark;
+	font-weight: variables.$normal;
 }
 
 h5,h6 {
 	margin: 1.414em 0 0.5em;
 	line-height: 1.4;
-	color: $text;
-	font-weight: $normal;
+	color: variables.$text;
+	font-weight: variables.$normal;
 }
 
 h1 {
@@ -53,9 +56,9 @@ small,h6 {
 pre{
   font-family: monospace, monospace;
   font-size: 0.85rem;
-  color: $text-dark;
+  color: variables.$text-dark;
   width: min-content;
-  background: $background-alt;
+  background: variables.$background-alt;
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre;
@@ -63,7 +66,7 @@ pre{
   width: 100%;
   //max-width: 85%; // Remove later
   overflow: auto;
-  border: 1px solid $line;
+  border: 1px solid variables.$line;
 }
 
 a{
@@ -74,12 +77,12 @@ a{
 }
 
 .link{
-   color: $primary;
+   color: variables.$primary;
   text-decoration: underline;
 
-  @include desktop{
+  @include mixins.desktop{
       &:hover{
-        color: $primary-dark;
+        color: variables.$primary-dark;
       }
   }
 }
