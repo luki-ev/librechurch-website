@@ -52,7 +52,7 @@ gulp.task('browser-sync',
 		},
 		function watcher(done) {
 			// EJS and HTML Watcher
-			gulp.watch(['src/*.ejs', 'src/**/*.ejs'],  gulp.parallel(reloader));
+			gulp.watch(['src/*.html', 'src/**/*.html'],  gulp.parallel(reloader));
 			// SASS / CSS Watchers
 			gulp.watch(['src/theme/sass/**/*.scss','src/theme/sass/*.scss'], gulp.parallel('style_dev_theme'));
 			// JS Watcher
