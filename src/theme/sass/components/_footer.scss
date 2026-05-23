@@ -1,5 +1,9 @@
+@use "sass:color";
+@use "../base/variables";
+@use "../utils/mixins";
+
 .footer{
-	background-color: $background;
+	background-color: variables.$background;
 	padding: 36pt 0;
 }
 
@@ -8,7 +12,7 @@
 	justify-content: space-between;
 	flex-direction: column;
 
-	@include tablet{
+	@include mixins.tablet{
 		flex-direction: row;
 	}
 }
@@ -18,16 +22,16 @@
 	padding-right: 16pt;
 	display: block;
 	cursor: pointer;
-	color: $primary;
+	color: variables.$primary;
 	font-size: 1.225rem;
 	min-width: 33%;
 	margin-bottom: 1.5rem;
 
-	@include tablet{
+	@include mixins.tablet{
 		margin-bottom: 0;
 	}
 	
-	@include desktop{
+	@include mixins.desktop{
 		min-width: 25%;
 		font-size: 1.325rem;
 	}
@@ -46,7 +50,7 @@
 	flex-direction: column;
 	font-size: 0.9rem;
 
-	@include desktop{
+	@include mixins.desktop{
 		flex-wrap: nowrap;
 		flex-direction: row;
 	}
@@ -57,18 +61,18 @@
 	display: inline-block;
 	margin-bottom: 8pt;
     
-    @include desktop {
+    @include mixins.desktop {
         max-width: 50%;
     }
 }
 
 .footer__link{
-	color: $primary;
-	border-bottom: 1px dotted $primary;
+	color: variables.$primary;
+	border-bottom: 1px dotted variables.$primary;
 	padding-bottom: 1pt;
 	transition: 0.7s;
 
-	@include desktop{
+	@include mixins.desktop{
 		&:hover{
 			color: #fafafa;
 			border-color: #fafafa;
@@ -86,21 +90,21 @@
 
 /*--- Modifiers---*/
 .footer--dark{
-	background-color: $background-dark;
+	background-color: variables.$background-dark;
 
 	.footer__textLogo{
 		color: #fff;
 	}
 	
 	.footer__inner{
-		color: darken(#fff,15%);
+		color: color.adjust(#fff,$lightness: -15%);
 	}
 
 	.footer__link{
-		color: darken(#fff,15%);
-		border-color: darken(#fff,15%);
+		color: color.adjust(#fff,$lightness: -15%);
+		border-color: color.adjust(#fff,$lightness: -15%);
 
-		@include desktop{
+		@include mixins.desktop{
 			&:hover{
 				color: #fff;
 				border-color: #fff;

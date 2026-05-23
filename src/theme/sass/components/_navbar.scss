@@ -1,8 +1,11 @@
+@use "../base/variables";
+@use "../utils/mixins";
+
 .navbar{
 	position: fixed;
 	z-index: 100;
 	width: 100%;
-	background-color: $primary;
+	background-color: variables.$primary;
 	transition: 0.7s;
 
 	&--nofixed{
@@ -15,7 +18,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: $navbar-height;
+	height: variables.$navbar-height;
 	color: #fff;
 	transition: 0.7s;
 }
@@ -40,7 +43,7 @@
 		display: block;
 	}
 
-	@include desktop{
+	@include mixins.desktop{
 		display: block;
 	}
 
@@ -49,14 +52,14 @@
 		backface-visibility: hidden;
     	display: inline-block;
 
-		@include desktop{
+		@include mixins.desktop{
 			margin-left: 16pt;
 		}
 	}
 
 	a{
 		color: #fff;
-		@include desktop{
+		@include mixins.desktop{
 			opacity: 0.75;
 
 			&:hover{
@@ -83,7 +86,7 @@
 		display: none;
 	}
 
-	@include desktop{
+	@include mixins.desktop{
 		display: none;
 	}
 }
@@ -93,8 +96,8 @@
 	background-color: transparent;
 	
 	.navbar__inner{
-		height: $navbar-height;
-		color: $hero-color; // Since this is transparent whatever color is used in the hero, fits here
+		height: variables.$navbar-height;
+		color: variables.$hero-color; // Since this is transparent whatever color is used in the hero, fits here
 	}
 }
 
@@ -106,7 +109,7 @@
 	width: 100%;
 	display: block;
 	list-style: none;
-	background-color: $background-dark;
+	background-color: variables.$background-dark;
 	color: #fff;
 }
 
@@ -146,7 +149,7 @@
   user-select: none;
 }
 
-@include desktop{
+@include mixins.desktop{
   .js .nav__mobile {
     position: relative;
   }

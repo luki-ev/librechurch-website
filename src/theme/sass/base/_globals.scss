@@ -1,6 +1,8 @@
+@use "variables";
+
 html{
 	box-sizing: border-box;
-	background-color: $background;
+	background-color: variables.$background;
 }
 
 *, *:before, *:after {
@@ -34,7 +36,7 @@ html{
 }
 
 .stress{
-	color: $text-dark;
+	color: variables.$text-dark;
 }
 
 img, svg{

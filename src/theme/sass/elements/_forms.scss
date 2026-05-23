@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../base/variables";
+
 form{
 	margin-bottom: 1.5em;
 	
@@ -20,7 +23,7 @@ label{
 	margin-bottom: 2pt;
 	display: block;
 	text-align: left;
-	color: $text;
+	color: variables.$text;
 	font-size: 0.9em;
 	padding-left: 10pt;
 }
@@ -35,37 +38,37 @@ input {
 	&[type="url"],
 	&[type="password"], {
 		appearance: none;
-		border: 1px solid $line;
+		border: 1px solid variables.$line;
 		width: 100%;
 		transition: 0.7s;
-		color: $text-dark;
-		font-family: $font;
-		font-weight: $normal;
+		color: variables.$text-dark;
+		font-family: variables.$font;
+		font-weight: variables.$normal;
 		padding: 10pt 20pt;
-		border-radius: $radius;
-		background-color: $background-alt;
+		border-radius: variables.$radius;
+		background-color: variables.$background-alt;
 		margin-bottom: 1.4em;
 		display: block;
 
 		&:focus{
-			border-color: transparentize($primary,0.5);
+			border-color: color.adjust(variables.$primary,$alpha: -0.5);
 			outline: 0;
-			background-color: $background;
+			background-color: variables.$background;
 		}
 	}
 }
 
 textarea{
 	appearance: none;
-	border: 1px solid $line;
+	border: 1px solid variables.$line;
 	width: 100%;
 	transition: 0.7s;
-	color: $text-dark;
-	font-family: $font;
-	font-weight: $normal;
+	color: variables.$text-dark;
+	font-family: variables.$font;
+	font-weight: variables.$normal;
 	padding: 12pt 24pt;
-	border-radius: $radius;
-	background-color: $background-alt;
+	border-radius: variables.$radius;
+	background-color: variables.$background-alt;
 	margin-bottom: 1.4em;
 	display: block;
 	resize: none;
@@ -73,25 +76,25 @@ textarea{
 	outline:0;
 
 	&:focus{
-		border-color: transparentize($primary,0.5);
+		border-color: color.adjust(variables.$primary,$alpha: -0.5);
 		outline: 0;
-		background-color: $background;
+		background-color: variables.$background;
 	}
 }
 
 // Select
 select{
-	border: 1px solid $line;
+	border: 1px solid variables.$line;
 	width: 100%;
 	transition: 0.7s;
-	color: $text-dark;
-	font-family: $font;
-	font-weight: $normal;
+	color: variables.$text-dark;
+	font-family: variables.$font;
+	font-weight: variables.$normal;
 	padding: 10pt 20pt;
 	margin-bottom: 1.4em;
 	display: block;
-	border-radius: $radius;
-	background-color: $background-alt;
+	border-radius: variables.$radius;
+	background-color: variables.$background-alt;
 	outline: 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -113,22 +116,22 @@ select{
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
 	font-size:  .9em;
 	opacity: .65;
-	color: $text;
+	color: variables.$text;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	font-size:  .9em;
 	opacity: .65;
-	color: $text;
+	color: variables.$text;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
 	font-size:  .9em;
 	opacity: .65;
-	color: $text;
+	color: variables.$text;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 + lt if placeholders.js */
 	font-size:  .9em;
 	opacity: .65;
-	color: $text;
+	color: variables.$text;
 }
 
 // Radio => Thanks to Materialize CSS => http://materializecss.com/forms.html
@@ -172,12 +175,12 @@ select{
 [type="radio"]:not(:checked) + label:before {
 	transition: .28s ease;
 	border-radius: 50%;
-	border: 1px solid $text;
+	border: 1px solid variables.$text;
 }
 [type="radio"]:not(:checked) + label:after {
 	transition: .28s ease;
 	border-radius: 50%;
-	border: 1px solid $text;
+	border: 1px solid variables.$text;
 	z-index: -1;
 	transform: scale(0);
 }
@@ -189,8 +192,8 @@ select{
 }
 [type="radio"]:checked + label:after {
 	border-radius: 50%;
-	border: 1px solid $primary;
-	background-color: $primary;
+	border: 1px solid variables.$primary;
+	background-color: variables.$primary;
 	z-index: 0;
 	transform: scale(1.02);
 }
@@ -199,19 +202,19 @@ select{
 [type="radio"]:disabled:not(:checked) + label:before,
 [type="radio"]:disabled:checked + label:before {
 	background-color: transparent;
-	border-color: $line;
+	border-color: variables.$line;
 	cursor: default;
 }
 [type="radio"]:disabled + label {
-	color: $line;
+	color: variables.$line;
 	cursor: default;
 }
 [type="radio"]:disabled:not(:checked) + label:before {
-	border-color: $line;
+	border-color: variables.$line;
 }
 [type="radio"]:disabled:checked + label:after {
-	background-color: $line;
-	border-color: $text;
+	background-color: variables.$line;
+	border-color: variables.$text;
 }
 
 // Checkbox
@@ -248,7 +251,7 @@ select{
 		width: 15px;
 		height: 15px;
 		z-index: 0;
-		border: 1px solid $text;
+		border: 1px solid variables.$text;
 		border-radius: 1px;
 		margin-top: 4px;
 		transition: .2s;
@@ -256,7 +259,7 @@ select{
 
 	&:not(:checked):disabled + label:before {
 		border: none;
-		background-color: $line;
+		background-color: variables.$line;
 	}
 }
 
@@ -267,15 +270,15 @@ select{
 		width: 10px; height: 18px;
 		border-top: 2px solid transparent;
 		border-left: 2px solid transparent;
-		border-right: 2px solid $success;
-		border-bottom: 2px solid $success;
+		border-right: 2px solid variables.$success;
+		border-bottom: 2px solid variables.$success;
 		transform: rotate(40deg);
 		backface-visibility: hidden;
 		transform-origin: 100% 100%;
 	}
 
 	&:disabled + label:before {
-		border-right: 2px solid $line;
-		border-bottom: 2px solid $line;
+		border-right: 2px solid variables.$line;
+		border-bottom: 2px solid variables.$line;
 	}
 }

@@ -1,12 +1,16 @@
+@use "sass:color";
+@use "../base/variables";
+@use "../utils/mixins";
+
 .hero{
 	position: relative;
 	width: 100%;
 	background-image: url("../images/churches_cologne.jpg");
-	box-shadow: $hero-shadow;
+	box-shadow: variables.$hero-shadow;
 	background-size: cover; 
 	background-position: center center;
 	background-repeat: no-repeat;
-	color: $hero-color;
+	color: variables.$hero-color;
 
 	&__inner{
 		position: relative;
@@ -15,14 +19,14 @@
 }
 
 .hero__text a {
-	border-bottom: 1px dotted $hero-color;
+	border-bottom: 1px dotted variables.$hero-color;
 	padding-bottom: 1pt;
 	transition: 0.7s;
 
-	@include desktop{
+	@include mixins.desktop{
 		&:hover{
-			color: $accent;
-			border-color: $accent;
+			color: variables.$accent;
+			border-color: variables.$accent;
 		}
 	}
 }
@@ -36,17 +40,17 @@
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	opacity: $hero-color-opacity;
+	opacity: variables.$hero-color-opacity;
 	z-index: 1;
-	background-color: $primary;
+	background-color: variables.$primary;
 }
 
 .hero__overlay--gradient{
-	background: linear-gradient(to right, $primary, $secondary);
+	background: linear-gradient(to right, variables.$primary, variables.$secondary);
 }
 
 .hero__overlay--gradientVertical{
-	background: linear-gradient(to bottom, $primary, $secondary);
+	background: linear-gradient(to bottom, variables.$primary, variables.$secondary);
 }
 
 // Mask
@@ -58,7 +62,7 @@
 	background-size: cover; 
 	background-position: center center;
 	background-repeat: no-repeat;
-	opacity: $hero-mask-opacity;
+	opacity: variables.$hero-mask-opacity;
 	z-index: 2;
 }
 
@@ -68,7 +72,7 @@
 	align-items: center;
 	justify-content: center;
 	min-height: calc( 100vh - 50px );
-	padding: calc( #{$navbar-height + 24pt}) 0; // Padding added to avoid overlapping with fixed navigation bars
+	padding: calc( #{variables.$navbar-height + 24pt}) 0; // Padding added to avoid overlapping with fixed navigation bars
 	overflow: auto;
 	
 	// This div allows normal behaviors for contained elements instead of flexbox aligning them 
@@ -97,13 +101,13 @@
 }
 
 .hero__button{
-	color: $hero-color;
-	border-color: $hero-color;
+	color: variables.$hero-color;
+	border-color: variables.$hero-color;
 
-	@include desktop{
+	@include mixins.desktop{
 		&:hover{
-			color: darken($hero-color,11%);
-			border-color: darken($hero-color,11%);
+			color: color.adjust(variables.$hero-color,$lightness: -11%);
+			border-color: color.adjust(variables.$hero-color,$lightness: -11%);
 		}
 	}
 }
@@ -117,15 +121,15 @@
 }
 
 .hero__sub__down{
-	width: $hero-down-size;
-	height: $hero-down-size;
-	color: $text;
+	width: variables.$hero-down-size;
+	height: variables.$hero-down-size;
+	color: variables.$text;
 	transition: 0.7s;
 	cursor: pointer;
 
-	@include desktop{
+	@include mixins.desktop{
 		&:hover{
-			color: $primary;
+			color: variables.$primary;
 		}
 	}
 }

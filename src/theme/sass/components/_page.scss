@@ -1,12 +1,15 @@
+@use "../base/variables";
+@use "../utils/mixins";
+
 .page__header{
 	position:relative;
-	color: $hero-color;
-	box-shadow: $hero-shadow;
+	color: variables.$hero-color;
+	box-shadow: variables.$hero-shadow;
 	width: 100%;
 }
 
 .page__header__inner{
-	padding: #{$navbar-height * 1.1} 0 0 0;
+	padding: #{variables.$navbar-height * 1.1} 0 0 0;
 	position: relative;
 	z-index: 3;
 }
@@ -44,7 +47,7 @@
 
 .page__inner{
 
-	@include desktop{
+	@include mixins.desktop{
 		display: flex;
 	}
 }
@@ -53,7 +56,7 @@
 	width: 100%;
 	position: relative;
 
-	@include desktop{
+	@include mixins.desktop{
 		display: block;
 		width: 300px;
 		flex-shrink: 0;

@@ -1,24 +1,27 @@
+@use "../base/variables";
+@use "../utils/mixins";
+
 .steps{
 	text-align: center;
 	padding: 16pt 0;
 }
 
 .steps__inner, .contact__inner{
-	@include desktop{
+	@include mixins.desktop{
 		display: flex;
 		justify-content: space-around;
 	}
 }
 
 .steps__inner a {
-	border-bottom: 1px dotted $text;
+	border-bottom: 1px dotted variables.$text;
 	padding-bottom: 1pt;
 	transition: 0.7s;
 
-	@include desktop{
+	@include mixins.desktop{
 		&:hover{
-			color: $text-dark;
-			border-color: $text-dark;
+			color: variables.$text-dark;
+			border-color: variables.$text-dark;
 		}
 	}
 }
@@ -27,14 +30,14 @@
 	padding: 16pt 12pt;
 	text-align: center;
 	width: 100%;
-	border-top: 1px solid $line;
+	border-top: 1px solid variables.$line;
 	overflow: auto; 
 
 	&:first-child{
 		border-top: none;
 	}
 
-	@include desktop{
+	@include mixins.desktop{
 		border-top: none;
 		width: auto;
 	}
@@ -43,7 +46,7 @@
 .step__media {
 	margin: 16pt 0;
 
-	@include desktop{
+	@include mixins.desktop{
 		margin: 32pt 0;
 	}
 }
@@ -51,7 +54,7 @@
 .contact__media {
  	margin: 4pt 0;
 
-	@include desktop{
+	@include mixins.desktop{
 		margin: 8pt 0;
 	}
 }
@@ -60,9 +63,9 @@
 	max-height: 100px;
 	max-width: 222px;
 	margin-top: 0pt;
-	@include noDragging;
+	@include mixins.noDragging;
 
-	@include tablet{
+	@include mixins.tablet{
 		max-width:none;
 	}
 }
