@@ -6,14 +6,10 @@ An MIT licensed template bundled with a minimal style guide to build websites fa
 
 ## Setup
 
-1. Install node and npm for gulp as build system
-
-## Production
-
-3. run ```npm run build``` in this folder.
-4. You'll find the generated site meant to be served/deployed inside the "public" directory.
+0. Site is a static site under "src", edit directly there
+1. Install node and npm for dev reload server
 
 ## Development
 
 1. Change in "src" folder
-2. Run ```npm run dev``` to spin up a local webserver serving the site on localhost:7000
+2. Run ```npm run dev``` to spin up a local webserver serving the site on localhost:3000
