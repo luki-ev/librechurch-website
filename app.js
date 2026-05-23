@@ -3,8 +3,7 @@ const app = express();
 const path = require('path');
 
 // Theme assets
-app.use(express.static(path.join(__dirname, 'src/theme/public/')));
-app.use(express.static(path.join(__dirname, 'src/theme/assets')));
+app.use(express.static(path.join(__dirname, 'src/theme')));
 
 // Static index page
 app.get('/', (req, res) => {

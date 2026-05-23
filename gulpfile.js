@@ -53,22 +53,16 @@ gulp.task('browser-sync',
 		function watcher(done) {
 			// EJS and HTML Watcher
 			gulp.watch(['src/*.html', 'src/**/*.html'],  gulp.parallel(reloader));
-			// SASS / CSS Watchers
-			gulp.watch(['src/theme/sass/**/*.scss','src/theme/sass/*.scss'], gulp.parallel('style_dev_theme'));
 		}
 	)
 );
 
 /*--- Main Gulp Tasks---*/
 gulp.task('default', 
-	gulp.series('clean',
-		gulp.parallel('style_dev_theme'),
-		'browser-sync'
-	)
+	gulp.series('clean','browser-sync')
 );
 
 // Build => Production-ready theme folder to upload (Default build)
 gulp.task('build',
-	gulp.series( 'theme_assets',
-		gulp.parallel('theme_style', 'theme_views'))
+	gulp.series( 'theme_assets')
 );
