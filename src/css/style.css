@@ -701,6 +701,11 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
   vertical-align: middle;
 }
 
+#nav-toggle:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: -2px;
+}
+
 @media (min-width: 992px) {
   #nav-toggle {
     display: none;
