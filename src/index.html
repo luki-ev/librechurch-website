@@ -18,22 +18,21 @@
     <body>
         <!-- Hero(extended) navbar -->
         <div class="navbar navbar--extended">
-            <nav class="nav__mobile"></nav>
             <div class="container">
                 <div class="navbar__inner">
                     <a href='#' class="navbar__logo">LibreChurch</a>
-                    <nav class="navbar__menu">
+                    <nav class="navbar__menu" id="navbar-menu">
                         <ul>
-                            <li><a href="#mastodon" class="scroll">News</a></li>
-                            <li><a href="#project" class="scroll">Vorhaben</a></li>
-                            <li><a href="#values" class="scroll">Werte</a></li>
-                            <li><a href="#audience" class="scroll">Zielgruppen</a></li>
-                            <li><a href="#contact" class="scroll">Ansprechpartner</a></li>
+                            <li><a href="#mastodon">News</a></li>
+                            <li><a href="#project">Vorhaben</a></li>
+                            <li><a href="#values">Werte</a></li>
+                            <li><a href="#audience">Zielgruppen</a></li>
+                            <li><a href="#contact">Ansprechpartner</a></li>
                             <li><a href="https://doc.librechurch.org/" target="_blank">Dokumentation</a></li>
-                            <li><a href="#back" class="scroll">Unterstützen</a></li>
+                            <li><a href="#back">Unterstützen</a></li>
                         </ul>
                     </nav>
-                    <div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+                    <button class="navbar__menu-mob" id="nav-toggle" aria-expanded="false" aria-controls="navbar-menu"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></button>
                 </div>
             </div>
         </div>
@@ -244,33 +243,7 @@
             </div>
             <div class="container">
                 <h2>Kontakt</h2>
-                <p>
-                    <script>
-                        <!--
-                        // Email obfuscator script 2.1 by Tim Williams, University of Arizona
-                        // Random encryption key feature coded by Andrew Moulden
-                        // This code is freeware provided these four comment lines remain intact
-                        // A wizard to generate this code is at http://www.jottings.com/obfuscator/
-                        { coded = "QXjjApa@b1fpnERXpER.Ape"
-                          key = "sADB2NtmXRq9EdefWOC0pGTQ8IYUvaVlwiF3PnM7oLSjKZyuhx4czgbJ165rHk"
-                          shift=coded.length
-                          link=""
-                          for (i=0; i<coded.length; i++) {
-                            if (key.indexOf(coded.charAt(i))==-1) {
-                              ltr = coded.charAt(i)
-                              link += (ltr)
-                            }
-                            else {
-                              ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
-                              link += (key.charAt(ltr))
-                            }
-                          }
-                        document.write("Mail an <a href='mailto:"+link+"'>"+link+"</a>.")
-                        }
-                        //-->
-                    </script>
-                    <noscript>Sorry, du brauchst Javascript, um die Mailadresse zu entschlüsseln. Kontaktiere uns über <a href="https://luki.org/kontakt/" target="_blank">luki.org</a>.</noscript>
-                </p>
+                <p id="contact-email">Kontaktiere uns über <a href="https://luki.org/kontakt/" target="_blank">luki.org</a>.</p>
             </div>
         </div>
 
@@ -308,7 +281,7 @@
         <div class="footer footer--dark">
             <div class="container">
                 <div class="footer__inner">
-                    <a href='#' class="footer__textLogo"><img src="images/librechurch_header.png" alt="LibreChurch Logo: In einer Wolke reichen sich drei die Hände."/><br/>LibreChurch</a></a>
+                    <a href='#' class="footer__textLogo"><img src="images/librechurch_header.png" alt="LibreChurch Logo: In einer Wolke reichen sich drei die Hände."/><br/>LibreChurch</a>
                     <div class="footer__data">
                         <div class="footer__data__item">
                             <div class="footer__row">
@@ -336,7 +309,6 @@
                 </div>
             </div>
         </div>
-    <script src="js/libraries/responsive-nav.js"></script>
     <script src="js/app.js"></script>
     </body>
 </html>
