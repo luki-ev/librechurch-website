@@ -682,7 +682,13 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
 }
 
 #nav-toggle {
-  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  padding: 0 14px;
+  margin-bottom: 0;
+  line-height: 1;
   background: none;
   border: none;
   cursor: pointer;
@@ -693,6 +699,11 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
   height: 1.2em;
   width: 1.2em;
   vertical-align: middle;
+}
+
+#nav-toggle:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: -2px;
 }
 
 @media (min-width: 992px) {
