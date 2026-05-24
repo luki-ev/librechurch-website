@@ -682,7 +682,13 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
 }
 
 #nav-toggle {
-  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  padding: 0 14px;
+  margin-bottom: 0;
+  line-height: 1;
   background: none;
   border: none;
   cursor: pointer;
