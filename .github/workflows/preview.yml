@@ -1,4 +1,4 @@
-name: Deploy PR previews
+name: deploy-preview
 
 on:
   pull_request:
@@ -16,11 +16,8 @@ jobs:
   deploy-preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+      - uses: actions/checkout@v6
+      - uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./src/
           wait-for-pages-deployment: true
