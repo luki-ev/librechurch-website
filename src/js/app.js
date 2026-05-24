@@ -61,15 +61,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 		});
 	}
 
-	// Toggle navbar--extended via IntersectionObserver on hero content
-	const navbar = document.querySelector('.navbar');
-	const navConverter = document.getElementById('navConverter');
-	if (navConverter && navbar) {
-		new IntersectionObserver(([entry]) => {
-			navbar.classList.toggle('navbar--extended', entry.isIntersecting);
-		}).observe(navConverter);
-	}
-
 	// Hide scroll-to-next arrow after user scrolls away from the top
 	const scrollToNext = document.getElementById('scrollToNext');
 	if (scrollToNext) {
