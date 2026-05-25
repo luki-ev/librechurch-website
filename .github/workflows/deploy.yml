@@ -3,6 +3,7 @@ name: deploy
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -16,4 +17,4 @@ jobs:
         echo '${{ secrets.SSH_PUBLIC_KEY }}' > ~/.ssh/id_rsa.pub
         chmod 400 ~/.ssh/id_rsa
     - name: Deploy to librechurch.org
-      run: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc src/ lki01-librechurchweb@lki01.hostsharing.net:/home/pacs/lki01/users/librechurchweb/doms/librechurch.org/htdocs-ssl
+      run: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --delete -i src/ lki01-librechurchweb@lki01.hostsharing.net:/home/pacs/lki01/users/librechurchweb/doms/librechurch.org/htdocs-ssl
